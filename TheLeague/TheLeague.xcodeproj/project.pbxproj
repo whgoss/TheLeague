@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D63B910917CBB3D700576B55 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D602C19F17CBB20100FAEE9B /* FacebookSDK.framework */; };
+		D63B910C17CBB3F600576B55 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D63B910B17CBB3F600576B55 /* LoginViewController.m */; };
+		D63B910F17CBD7D400576B55 /* APIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D63B910E17CBD7D400576B55 /* APIClient.m */; };
+		D63B911217CBDA3700576B55 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D63B911117CBDA3700576B55 /* MBProgressHUD.m */; };
+		D63B911517CBED8A00576B55 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D63B911417CBED8A00576B55 /* UserManager.m */; };
+		D65151EC17CCE30A00378A25 /* Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = D65151EB17CCE30A00378A25 /* Base64.m */; };
+		D65151EF17CCE6E600378A25 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = D65151EE17CCE6E600378A25 /* Constants.m */; };
+		D65151F217CCF07700378A25 /* NSString+NSString_Extended.m in Sources */ = {isa = PBXBuildFile; fileRef = D65151F117CCF07700378A25 /* NSString+NSString_Extended.m */; };
+		D65151F517CD022500378A25 /* BaseUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65151F417CD022500378A25 /* BaseUIViewController.m */; };
 		D6F63A1817CBAA9A0090ECDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F63A1717CBAA9A0090ECDF /* UIKit.framework */; };
 		D6F63A1A17CBAA9A0090ECDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F63A1917CBAA9A0090ECDF /* Foundation.framework */; };
 		D6F63A1C17CBAA9A0090ECDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F63A1B17CBAA9A0090ECDF /* CoreGraphics.framework */; };
@@ -18,7 +27,6 @@
 		D6F63A2E17CBAA9A0090ECDF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6F63A2D17CBAA9A0090ECDF /* Default-568h@2x.png */; };
 		D6F63A3117CBAA9A0090ECDF /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6F63A2F17CBAA9A0090ECDF /* MainStoryboard_iPhone.storyboard */; };
 		D6F63A3417CBAA9A0090ECDF /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6F63A3217CBAA9A0090ECDF /* MainStoryboard_iPad.storyboard */; };
-		D6F63A3717CBAA9A0090ECDF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F63A3617CBAA9A0090ECDF /* ViewController.m */; };
 		D6F63A5117CBAB5E0090ECDF /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F63A3F17CBAB5E0090ECDF /* AFHTTPClient.m */; };
 		D6F63A5217CBAB5E0090ECDF /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F63A4117CBAB5E0090ECDF /* AFHTTPRequestOperation.m */; };
 		D6F63A5317CBAB5E0090ECDF /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D6F63A4317CBAB5E0090ECDF /* AFImageRequestOperation.m */; };
@@ -31,6 +39,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D602C19F17CBB20100FAEE9B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		D63B910717CBB3B200576B55 /* FacebookSDK */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = FacebookSDK; path = ../../../Documents/FacebookSDK/FacebookSDK.framework/Versions/A/FacebookSDK; sourceTree = "<group>"; };
+		D63B910A17CBB3F600576B55 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		D63B910B17CBB3F600576B55 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		D63B910D17CBD7D400576B55 /* APIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClient.h; sourceTree = "<group>"; };
+		D63B910E17CBD7D400576B55 /* APIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClient.m; sourceTree = "<group>"; };
+		D63B911017CBDA3700576B55 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		D63B911117CBDA3700576B55 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		D63B911317CBED8A00576B55 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		D63B911417CBED8A00576B55 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
+		D65151E817CBFA4000378A25 /* Callback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Callback.h; sourceTree = "<group>"; };
+		D65151EA17CCE30A00378A25 /* Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64.h; sourceTree = "<group>"; };
+		D65151EB17CCE30A00378A25 /* Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base64.m; sourceTree = "<group>"; };
+		D65151ED17CCE6E600378A25 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		D65151EE17CCE6E600378A25 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		D65151F017CCF07600378A25 /* NSString+NSString_Extended.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSString_Extended.h"; sourceTree = "<group>"; };
+		D65151F117CCF07700378A25 /* NSString+NSString_Extended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSString_Extended.m"; sourceTree = "<group>"; };
+		D65151F317CD022500378A25 /* BaseUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseUIViewController.h; sourceTree = "<group>"; };
+		D65151F417CD022500378A25 /* BaseUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseUIViewController.m; sourceTree = "<group>"; };
 		D6F63A1417CBAA9A0090ECDF /* TheLeague.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheLeague.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F63A1717CBAA9A0090ECDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D6F63A1917CBAA9A0090ECDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -46,8 +73,6 @@
 		D6F63A2D17CBAA9A0090ECDF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D6F63A3017CBAA9A0090ECDF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		D6F63A3317CBAA9A0090ECDF /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		D6F63A3517CBAA9A0090ECDF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D6F63A3617CBAA9A0090ECDF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D6F63A3E17CBAB5E0090ECDF /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		D6F63A3F17CBAB5E0090ECDF /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		D6F63A4017CBAB5E0090ECDF /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -74,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D63B910917CBB3D700576B55 /* FacebookSDK.framework in Frameworks */,
 				D6F63A1817CBAA9A0090ECDF /* UIKit.framework in Frameworks */,
 				D6F63A1A17CBAA9A0090ECDF /* Foundation.framework in Frameworks */,
 				D6F63A1C17CBAA9A0090ECDF /* CoreGraphics.framework in Frameworks */,
@@ -83,9 +109,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D65151E917CCE30A00378A25 /* Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				D65151EA17CCE30A00378A25 /* Base64.h */,
+				D65151EB17CCE30A00378A25 /* Base64.m */,
+			);
+			path = Base64;
+			sourceTree = "<group>";
+		};
 		D6F63A0B17CBAA9A0090ECDF = {
 			isa = PBXGroup;
 			children = (
+				D63B910717CBB3B200576B55 /* FacebookSDK */,
 				D6F63A1D17CBAA9A0090ECDF /* TheLeague */,
 				D6F63A1617CBAA9A0090ECDF /* Frameworks */,
 				D6F63A1517CBAA9A0090ECDF /* Products */,
@@ -103,6 +139,7 @@
 		D6F63A1617CBAA9A0090ECDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D602C19F17CBB20100FAEE9B /* FacebookSDK.framework */,
 				D6F63A1717CBAA9A0090ECDF /* UIKit.framework */,
 				D6F63A1917CBAA9A0090ECDF /* Foundation.framework */,
 				D6F63A1B17CBAA9A0090ECDF /* CoreGraphics.framework */,
@@ -113,14 +150,28 @@
 		D6F63A1D17CBAA9A0090ECDF /* TheLeague */ = {
 			isa = PBXGroup;
 			children = (
+				D65151F317CD022500378A25 /* BaseUIViewController.h */,
+				D65151F417CD022500378A25 /* BaseUIViewController.m */,
+				D65151E917CCE30A00378A25 /* Base64 */,
+				D65151E817CBFA4000378A25 /* Callback.h */,
+				D63B911017CBDA3700576B55 /* MBProgressHUD.h */,
+				D63B911117CBDA3700576B55 /* MBProgressHUD.m */,
+				D63B910D17CBD7D400576B55 /* APIClient.h */,
+				D63B910E17CBD7D400576B55 /* APIClient.m */,
 				D6F63A2617CBAA9A0090ECDF /* AppDelegate.h */,
 				D6F63A2717CBAA9A0090ECDF /* AppDelegate.m */,
+				D63B910A17CBB3F600576B55 /* LoginViewController.h */,
+				D63B910B17CBB3F600576B55 /* LoginViewController.m */,
+				D63B911317CBED8A00576B55 /* UserManager.h */,
+				D63B911417CBED8A00576B55 /* UserManager.m */,
 				D6F63A2F17CBAA9A0090ECDF /* MainStoryboard_iPhone.storyboard */,
 				D6F63A3217CBAA9A0090ECDF /* MainStoryboard_iPad.storyboard */,
-				D6F63A3517CBAA9A0090ECDF /* ViewController.h */,
-				D6F63A3617CBAA9A0090ECDF /* ViewController.m */,
 				D6F63A3D17CBAB5E0090ECDF /* AFNetworking */,
 				D6F63A1E17CBAA9A0090ECDF /* Supporting Files */,
+				D65151ED17CCE6E600378A25 /* Constants.h */,
+				D65151EE17CCE6E600378A25 /* Constants.m */,
+				D65151F017CCF07600378A25 /* NSString+NSString_Extended.h */,
+				D65151F117CCF07700378A25 /* NSString+NSString_Extended.m */,
 			);
 			path = TheLeague;
 			sourceTree = "<group>";
@@ -200,6 +251,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				he,
 			);
 			mainGroup = D6F63A0B17CBAA9A0090ECDF;
 			productRefGroup = D6F63A1517CBAA9A0090ECDF /* Products */;
@@ -234,7 +286,6 @@
 			files = (
 				D6F63A2417CBAA9A0090ECDF /* main.m in Sources */,
 				D6F63A2817CBAA9A0090ECDF /* AppDelegate.m in Sources */,
-				D6F63A3717CBAA9A0090ECDF /* ViewController.m in Sources */,
 				D6F63A5117CBAB5E0090ECDF /* AFHTTPClient.m in Sources */,
 				D6F63A5217CBAB5E0090ECDF /* AFHTTPRequestOperation.m in Sources */,
 				D6F63A5317CBAB5E0090ECDF /* AFImageRequestOperation.m in Sources */,
@@ -244,6 +295,14 @@
 				D6F63A5717CBAB5E0090ECDF /* AFURLConnectionOperation.m in Sources */,
 				D6F63A5817CBAB5E0090ECDF /* AFXMLRequestOperation.m in Sources */,
 				D6F63A5917CBAB5E0090ECDF /* UIImageView+AFNetworking.m in Sources */,
+				D63B910C17CBB3F600576B55 /* LoginViewController.m in Sources */,
+				D63B910F17CBD7D400576B55 /* APIClient.m in Sources */,
+				D63B911217CBDA3700576B55 /* MBProgressHUD.m in Sources */,
+				D63B911517CBED8A00576B55 /* UserManager.m in Sources */,
+				D65151EC17CCE30A00378A25 /* Base64.m in Sources */,
+				D65151EF17CCE6E600378A25 /* Constants.m in Sources */,
+				D65151F217CCF07700378A25 /* NSString+NSString_Extended.m in Sources */,
+				D65151F517CD022500378A25 /* BaseUIViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,9 +397,17 @@
 		D6F63A3B17CBAA9A0090ECDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Documents/FacebookSDK\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TheLeague/TheLeague-Prefix.pch";
 				INFOPLIST_FILE = "TheLeague/TheLeague-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Documents/FacebookSDK/FacebookSDK.framework/Versions/A\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -349,9 +416,17 @@
 		D6F63A3C17CBAA9A0090ECDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Documents/FacebookSDK\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TheLeague/TheLeague-Prefix.pch";
 				INFOPLIST_FILE = "TheLeague/TheLeague-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Documents/FacebookSDK/FacebookSDK.framework/Versions/A\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -376,6 +451,7 @@
 				D6F63A3C17CBAA9A0090ECDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
