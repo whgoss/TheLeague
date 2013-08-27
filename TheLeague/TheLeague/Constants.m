@@ -14,6 +14,10 @@ NSString *const API_KEY = @"xmFBDbVviZpETY5oufGw";
 NSString *const BASE_URL = @"http://willgoss.com/theleague";
 NSString *const LOGIN_USER = @"/loginUser.php";
 NSString *const NOTIFICATION_USER_LOGGED_IN = @"NOTIFICATION_USER_LOGGED_IN";
+NSString *const ENDPOINT_STANDINGS = @"/getStandings.php";
+
+NSString *const USER = @"user";
+NSString *const ID = @"id";
 
 // Segue constants
 NSString *const LOGIN_TO_MAIN = @"LoginToMainSegue";

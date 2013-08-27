@@ -17,6 +17,10 @@
 		D65151F217CCF07700378A25 /* NSString+NSString_Extended.m in Sources */ = {isa = PBXBuildFile; fileRef = D65151F117CCF07700378A25 /* NSString+NSString_Extended.m */; };
 		D65151F517CD022500378A25 /* BaseUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65151F417CD022500378A25 /* BaseUIViewController.m */; };
 		D65151F817CD043F00378A25 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65151F717CD043F00378A25 /* MainViewController.m */; };
+		D65151FB17CD3CB200378A25 /* default-avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D65151FA17CD3CB200378A25 /* default-avatar@2x.png */; };
+		D651520417CD3DEC00378A25 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = D651520317CD3DEC00378A25 /* User.m */; };
+		D651520717CD3E5D00378A25 /* Standing.m in Sources */ = {isa = PBXBuildFile; fileRef = D651520617CD3E5D00378A25 /* Standing.m */; };
+		D651520A17CD3F0A00378A25 /* StandingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D651520917CD3F0A00378A25 /* StandingCell.m */; };
 		D6F63A1817CBAA9A0090ECDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F63A1717CBAA9A0090ECDF /* UIKit.framework */; };
 		D6F63A1A17CBAA9A0090ECDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F63A1917CBAA9A0090ECDF /* Foundation.framework */; };
 		D6F63A1C17CBAA9A0090ECDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F63A1B17CBAA9A0090ECDF /* CoreGraphics.framework */; };
@@ -61,6 +65,13 @@
 		D65151F417CD022500378A25 /* BaseUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseUIViewController.m; sourceTree = "<group>"; };
 		D65151F617CD043F00378A25 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		D65151F717CD043F00378A25 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		D65151FA17CD3CB200378A25 /* default-avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-avatar@2x.png"; sourceTree = "<group>"; };
+		D651520217CD3DEC00378A25 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		D651520317CD3DEC00378A25 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		D651520517CD3E5D00378A25 /* Standing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Standing.h; sourceTree = "<group>"; };
+		D651520617CD3E5D00378A25 /* Standing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Standing.m; sourceTree = "<group>"; };
+		D651520817CD3F0A00378A25 /* StandingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandingCell.h; sourceTree = "<group>"; };
+		D651520917CD3F0A00378A25 /* StandingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandingCell.m; sourceTree = "<group>"; };
 		D6F63A1417CBAA9A0090ECDF /* TheLeague.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheLeague.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F63A1717CBAA9A0090ECDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D6F63A1917CBAA9A0090ECDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,6 +132,34 @@
 			path = Base64;
 			sourceTree = "<group>";
 		};
+		D65151F917CD3C8A00378A25 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D65151FA17CD3CB200378A25 /* default-avatar@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		D65151FC17CD3CBE00378A25 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D651520817CD3F0A00378A25 /* StandingCell.h */,
+				D651520917CD3F0A00378A25 /* StandingCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		D651520117CD3DDF00378A25 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D651520217CD3DEC00378A25 /* User.h */,
+				D651520317CD3DEC00378A25 /* User.m */,
+				D651520517CD3E5D00378A25 /* Standing.h */,
+				D651520617CD3E5D00378A25 /* Standing.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		D6F63A0B17CBAA9A0090ECDF = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +192,8 @@
 		D6F63A1D17CBAA9A0090ECDF /* TheLeague */ = {
 			isa = PBXGroup;
 			children = (
+				D651520117CD3DDF00378A25 /* Models */,
+				D65151FC17CD3CBE00378A25 /* Cells */,
 				D65151F317CD022500378A25 /* BaseUIViewController.h */,
 				D65151F417CD022500378A25 /* BaseUIViewController.m */,
 				D65151E917CCE30A00378A25 /* Base64 */,
@@ -177,6 +218,7 @@
 				D65151F117CCF07700378A25 /* NSString+NSString_Extended.m */,
 				D65151F617CD043F00378A25 /* MainViewController.h */,
 				D65151F717CD043F00378A25 /* MainViewController.m */,
+				D65151F917CD3C8A00378A25 /* Images */,
 			);
 			path = TheLeague;
 			sourceTree = "<group>";
@@ -279,6 +321,7 @@
 				D6F63A2E17CBAA9A0090ECDF /* Default-568h@2x.png in Resources */,
 				D6F63A3117CBAA9A0090ECDF /* MainStoryboard_iPhone.storyboard in Resources */,
 				D6F63A3417CBAA9A0090ECDF /* MainStoryboard_iPad.storyboard in Resources */,
+				D65151FB17CD3CB200378A25 /* default-avatar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +352,9 @@
 				D65151F217CCF07700378A25 /* NSString+NSString_Extended.m in Sources */,
 				D65151F517CD022500378A25 /* BaseUIViewController.m in Sources */,
 				D65151F817CD043F00378A25 /* MainViewController.m in Sources */,
+				D651520417CD3DEC00378A25 /* User.m in Sources */,
+				D651520717CD3E5D00378A25 /* Standing.m in Sources */,
+				D651520A17CD3F0A00378A25 /* StandingCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

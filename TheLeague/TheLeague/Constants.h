@@ -14,6 +14,11 @@ NSString extern *const API_KEY;
 NSString extern *const BASE_URL;
 NSString extern *const LOGIN_USER;
 NSString extern *const NOTIFICATION_USER_LOGGED_IN;
+NSString extern *const ENDPOINT_STANDINGS;
+
+// Misc constants
+NSString extern *const USER;
+NSString extern *const ID;
 
 // Segue constants
 NSString extern *const LOGIN_TO_MAIN;

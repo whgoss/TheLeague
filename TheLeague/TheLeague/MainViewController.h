@@ -8,6 +8,9 @@
 
 #import "BaseUIViewController.h"
 
-@interface MainViewController : BaseUIViewController
+@interface MainViewController : BaseUIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) NSMutableArray *standingsArray;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

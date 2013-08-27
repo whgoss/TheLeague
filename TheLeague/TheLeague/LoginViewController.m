@@ -40,7 +40,7 @@
     // listen for login notification
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loginCallback) name:NOTIFICATION_USER_LOGGED_IN object:nil];
     
-    AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     if (!appDelegate.session.isOpen)
     {
         // create a fresh session object
@@ -129,6 +129,8 @@
 {
     // get app delegate
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    
+    // get logged in user info
     NSString *endpoint = [NSString stringWithFormat:@"%@", LOGIN_USER];
     NSArray *keys = [[NSArray alloc] initWithObjects:FACEBOOK_ID, NAME, AUTH_HASH, nil];
     NSString *hash = [APIClient authHash];
