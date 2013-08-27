@@ -15,6 +15,9 @@ NSString extern *const BASE_URL;
 NSString extern *const LOGIN_USER;
 NSString extern *const NOTIFICATION_USER_LOGGED_IN;
 
+// Segue constants
+NSString extern *const LOGIN_TO_MAIN;
+
 // GET paramter constants
 NSString extern *const NAME;
 NSString extern *const FACEBOOK_ID;

@@ -16,6 +16,7 @@
 		D65151EF17CCE6E600378A25 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = D65151EE17CCE6E600378A25 /* Constants.m */; };
 		D65151F217CCF07700378A25 /* NSString+NSString_Extended.m in Sources */ = {isa = PBXBuildFile; fileRef = D65151F117CCF07700378A25 /* NSString+NSString_Extended.m */; };
 		D65151F517CD022500378A25 /* BaseUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65151F417CD022500378A25 /* BaseUIViewController.m */; };
+		D65151F817CD043F00378A25 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D65151F717CD043F00378A25 /* MainViewController.m */; };
 		D6F63A1817CBAA9A0090ECDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F63A1717CBAA9A0090ECDF /* UIKit.framework */; };
 		D6F63A1A17CBAA9A0090ECDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F63A1917CBAA9A0090ECDF /* Foundation.framework */; };
 		D6F63A1C17CBAA9A0090ECDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F63A1B17CBAA9A0090ECDF /* CoreGraphics.framework */; };
@@ -58,6 +59,8 @@
 		D65151F117CCF07700378A25 /* NSString+NSString_Extended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSString_Extended.m"; sourceTree = "<group>"; };
 		D65151F317CD022500378A25 /* BaseUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseUIViewController.h; sourceTree = "<group>"; };
 		D65151F417CD022500378A25 /* BaseUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseUIViewController.m; sourceTree = "<group>"; };
+		D65151F617CD043F00378A25 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		D65151F717CD043F00378A25 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		D6F63A1417CBAA9A0090ECDF /* TheLeague.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheLeague.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F63A1717CBAA9A0090ECDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D6F63A1917CBAA9A0090ECDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -172,6 +175,8 @@
 				D65151EE17CCE6E600378A25 /* Constants.m */,
 				D65151F017CCF07600378A25 /* NSString+NSString_Extended.h */,
 				D65151F117CCF07700378A25 /* NSString+NSString_Extended.m */,
+				D65151F617CD043F00378A25 /* MainViewController.h */,
+				D65151F717CD043F00378A25 /* MainViewController.m */,
 			);
 			path = TheLeague;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 				D65151EF17CCE6E600378A25 /* Constants.m in Sources */,
 				D65151F217CCF07700378A25 /* NSString+NSString_Extended.m in Sources */,
 				D65151F517CD022500378A25 /* BaseUIViewController.m in Sources */,
+				D65151F817CD043F00378A25 /* MainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

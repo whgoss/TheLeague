@@ -171,7 +171,8 @@
         // hide loading indicator
         [_loadingIndicator hide:TRUE];
         
-        // go to main screen
+        // go to main controller
+        [self performSegueWithIdentifier:LOGIN_TO_MAIN sender:self];
     };
     
     return block;

@@ -15,6 +15,9 @@ NSString *const BASE_URL = @"http://willgoss.com/theleague";
 NSString *const LOGIN_USER = @"/loginUser.php";
 NSString *const NOTIFICATION_USER_LOGGED_IN = @"NOTIFICATION_USER_LOGGED_IN";
 
+// Segue constants
+NSString *const LOGIN_TO_MAIN = @"LoginToMainSegue";
+
 // GET parameter constants
 NSString *const NAME = @"name";
 NSString *const FACEBOOK_ID = @"fbId";
