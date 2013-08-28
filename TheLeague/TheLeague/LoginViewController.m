@@ -131,7 +131,7 @@
     AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     
     // get logged in user info
-    NSString *endpoint = [NSString stringWithFormat:@"%@", LOGIN_USER];
+    NSString *endpoint = [NSString stringWithFormat:@"%@", ENDPOINT_USER_LOGIN];
     NSArray *keys = [[NSArray alloc] initWithObjects:FACEBOOK_ID, NAME, AUTH_HASH, nil];
     NSString *hash = [APIClient authHash];
     NSString *displayName = [appDelegate.userManager.displayName urlencode];

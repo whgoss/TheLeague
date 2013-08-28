@@ -12,6 +12,14 @@
 #import "MainViewController.h"
 #import "Standing.h"
 #import "StandingCell.h"
+#import "UserProfileViewController.h"
+
+@interface MainViewController ()
+
+@property (strong, nonatomic) Standing *selectedStanding;
+@property (strong, nonatomic) User *selectedUser;
+
+@end
 
 @implementation MainViewController
 
@@ -21,6 +29,23 @@
     
     // hide the back button
     self.navigationItem.hidesBackButton = TRUE;
+}
+
+- (void)prepareForSegue: (UIStoryboardSegue*)segue sender: (id)sender
+{
+    if ([[segue identifier] isEqualToString:MAIN_TO_PROFILE])
+    {
+        // get destination view
+        UserProfileViewController *controller = [segue destinationViewController];
+        
+        // pass the selected user to destination view
+        [controller setUser:_selectedUser withStanding:_selectedStanding];
+    }
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     
     // show loading indicator
     _loadingIndicator.labelText = @"Loading...";
@@ -65,6 +90,21 @@
     return [NSString stringWithFormat:@"Bracket %d", section + 1];
 }
 
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // get corresponding user
+    int index = [self indexPathToArrayIndex:indexPath];
+    _selectedStanding = [_standingsArray objectAtIndex:index];
+    _selectedUser = _selectedStanding.user;
+    
+    // initiate segue
+    [self performSegueWithIdentifier:MAIN_TO_PROFILE sender:self];
+}
+
+#pragma mark - Convenience methods
+
 - (int)indexPathToArrayIndex: (NSIndexPath*)indexPath
 {
     int startingIndex = 0;
@@ -81,9 +121,6 @@
 {
     SuccessCallback block = ^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
     {
-        // hide loading indicator
-        [_loadingIndicator hide:TRUE];
-        
         // refresh standings array
         _standingsArray = [[NSMutableArray alloc] init];
         NSMutableArray *jsonStandingsArray = JSON;
@@ -91,13 +128,15 @@
         // loop through json array and populate custom event object off info
         for (NSDictionary * s in jsonStandingsArray)
         {
-            //populate our flik object
             Standing *standing = [[Standing alloc] initFromDictionary:s];
             [_standingsArray addObject:standing];
         }
         
         // refresh the table
         [_tableView reloadData];
+        
+        // hide loading indicator
+        [_loadingIndicator hide:TRUE];
     };
     
     return block;

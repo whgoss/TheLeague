@@ -1,18 +1,19 @@
 //
-//  User.h
+//  UserStatistics.h
 //  TheLeague
 //
-//  Created by Will Goss on 8/27/13.
+//  Created by Will Goss on 8/28/13.
 //  Copyright (c) 2013 Will Goss. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface User : NSObject
+@interface UserStatistics : NSObject
 
+@property (nonatomic) int wins;
+@property (nonatomic) int losses;
+@property (nonatomic) int winPercentage;
 @property (strong, nonatomic) NSString *userId;
-@property (strong, nonatomic) NSString *facebookId;
-@property (strong, nonatomic) NSString *name;
 
 - (id)initFromDictionary: (NSDictionary*)dict;
 

@@ -162,25 +162,25 @@
             </objects>
             <point key="canvasLocation" x="1253" y="53"/>
         </scene>
-        <!--View Controller - Player Profile-->
+        <!--User Profile View Controller - Player Profile-->
         <scene sceneID="fqI-6K-W1l">
             <objects>
-                <viewController id="M97-nR-16J" sceneMemberID="viewController">
+                <viewController id="M97-nR-16J" customClass="UserProfileViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Caf-Da-tgJ">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ekp-bn-CrB">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="172" id="Lhl-fB-duM"/>
-                                    <constraint firstAttribute="height" constant="138" id="z3X-qQ-NET"/>
+                                    <constraint firstAttribute="width" constant="104" id="3NF-Hj-Bst"/>
+                                    <constraint firstAttribute="height" constant="104" id="k1C-6m-st8"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Record: 20-5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkl-x5-exI">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Record:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkl-x5-exI">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="gJC-x5-ITc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -206,50 +206,61 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rank: 2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pct-dX-5lx">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rank:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pct-dX-5lx">
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="147" id="qUH-KL-CGB"/>
+                                    <constraint firstAttribute="height" constant="21" id="gMO-yE-hHQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Last Login Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIx-k0-KJ6">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Win %" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rs4-OO-3PI">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Win Percent:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rs4-OO-3PI">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="KB6-iO-yXm"/>
-                                    <constraint firstAttribute="width" constant="130" id="Qcw-UJ-B9L"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U62-bX-kyk">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="L2S-Q1-auv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rs4-OO-3PI" firstAttribute="leading" secondItem="IIx-k0-KJ6" secondAttribute="leading" type="default" id="03j-N0-Do9"/>
-                            <constraint firstItem="rs4-OO-3PI" firstAttribute="leading" secondItem="gkl-x5-exI" secondAttribute="leading" type="default" id="FoE-9e-oPs"/>
+                            <constraint firstItem="gkl-x5-exI" firstAttribute="leading" secondItem="Caf-Da-tgJ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="4ii-tL-lDv"/>
+                            <constraint firstItem="U62-bX-kyk" firstAttribute="top" secondItem="Caf-Da-tgJ" secondAttribute="top" constant="20" symbolic="YES" type="default" id="5xe-P4-6sy"/>
+                            <constraint firstItem="ekp-bn-CrB" firstAttribute="leading" secondItem="U62-bX-kyk" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="CGz-yv-izd"/>
+                            <constraint firstItem="gkl-x5-exI" firstAttribute="top" secondItem="Caf-Da-tgJ" secondAttribute="top" constant="77" id="CcP-g9-3LM"/>
+                            <constraint firstAttribute="trailing" secondItem="ekp-bn-CrB" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="JPz-6j-39S"/>
                             <constraint firstItem="1ag-QQ-sf9" firstAttribute="centerX" secondItem="HBt-OJ-t60" secondAttribute="centerX" type="default" id="LL4-hT-NeG"/>
+                            <constraint firstItem="ekp-bn-CrB" firstAttribute="leading" secondItem="gkl-x5-exI" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="MS0-oV-Ugp"/>
+                            <constraint firstItem="Pct-dX-5lx" firstAttribute="top" secondItem="U62-bX-kyk" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Mo1-wK-hxq"/>
                             <constraint firstAttribute="bottom" secondItem="HBt-OJ-t60" secondAttribute="bottom" constant="194" id="SUa-YY-Mwq"/>
-                            <constraint firstItem="Pct-dX-5lx" firstAttribute="top" secondItem="Caf-Da-tgJ" secondAttribute="top" constant="5" id="a6L-up-XPd"/>
-                            <constraint firstItem="Pct-dX-5lx" firstAttribute="leading" secondItem="gkl-x5-exI" secondAttribute="leading" type="default" id="c0b-B3-sz3"/>
-                            <constraint firstItem="ekp-bn-CrB" firstAttribute="leading" secondItem="rs4-OO-3PI" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="cHF-7I-Uak"/>
+                            <constraint firstItem="U62-bX-kyk" firstAttribute="leading" secondItem="Caf-Da-tgJ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="W81-hn-Xpw"/>
+                            <constraint firstItem="rs4-OO-3PI" firstAttribute="leading" secondItem="Caf-Da-tgJ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="cNo-YY-TOZ"/>
                             <constraint firstAttribute="bottom" secondItem="1ag-QQ-sf9" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="dsC-bi-uBs"/>
-                            <constraint firstItem="ekp-bn-CrB" firstAttribute="leading" secondItem="IIx-k0-KJ6" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ecG-U5-v6J"/>
-                            <constraint firstItem="gkl-x5-exI" firstAttribute="trailing" secondItem="Pct-dX-5lx" secondAttribute="trailing" type="default" id="g9x-qc-3g1"/>
-                            <constraint firstItem="IIx-k0-KJ6" firstAttribute="top" secondItem="rs4-OO-3PI" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="izx-it-Ynj"/>
-                            <constraint firstItem="ekp-bn-CrB" firstAttribute="trailing" secondItem="Caf-Da-tgJ" secondAttribute="trailing" type="default" id="kiT-Dx-Igg"/>
-                            <constraint firstItem="gkl-x5-exI" firstAttribute="top" secondItem="Pct-dX-5lx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="oni-9N-EOn"/>
-                            <constraint firstItem="ekp-bn-CrB" firstAttribute="top" secondItem="Caf-Da-tgJ" secondAttribute="top" type="default" id="qh9-G9-Tls"/>
-                            <constraint firstItem="rs4-OO-3PI" firstAttribute="top" secondItem="gkl-x5-exI" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="uOu-wl-EpI"/>
-                            <constraint firstItem="1ag-QQ-sf9" firstAttribute="centerX" secondItem="Caf-Da-tgJ" secondAttribute="centerX" type="default" id="yTe-4o-1lT"/>
+                            <constraint firstItem="rs4-OO-3PI" firstAttribute="bottom" secondItem="ekp-bn-CrB" secondAttribute="bottom" type="default" id="hsF-s4-hS3"/>
+                            <constraint firstItem="ekp-bn-CrB" firstAttribute="top" secondItem="Caf-Da-tgJ" secondAttribute="top" constant="20" symbolic="YES" type="default" id="jaz-Zs-8SI"/>
+                            <constraint firstItem="Pct-dX-5lx" firstAttribute="leading" secondItem="Caf-Da-tgJ" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="q91-P2-NyL"/>
+                            <constraint firstItem="1ag-QQ-sf9" firstAttribute="centerX" secondItem="Caf-Da-tgJ" secondAttribute="centerX" type="default" id="r3H-yj-xb6"/>
+                            <constraint firstItem="ekp-bn-CrB" firstAttribute="leading" secondItem="rs4-OO-3PI" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="rNI-7T-Q5c"/>
+                            <constraint firstItem="ekp-bn-CrB" firstAttribute="leading" secondItem="Pct-dX-5lx" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="vj5-3I-WTd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Player Profile" id="vE0-6x-d0y"/>
+                    <connections>
+                        <outlet property="avatarView" destination="ekp-bn-CrB" id="Knd-ZV-xEd"/>
+                        <outlet property="nameLabel" destination="U62-bX-kyk" id="04m-vi-E6l"/>
+                        <outlet property="rankLabel" destination="Pct-dX-5lx" id="Xug-vI-ZWX"/>
+                        <outlet property="recordLabel" destination="gkl-x5-exI" id="4gY-iZ-unO"/>
+                        <outlet property="winPercentageLabel" destination="rs4-OO-3PI" id="lrt-C1-P5a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JOj-Oq-Voo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -306,6 +317,18 @@
                 <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="positionLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="upDownView" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+        <class className="UserProfileViewController" superclassName="BaseUIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserProfileViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="avatarView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="lastLoginLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="rankLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recordLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="statsView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="winPercentageLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>

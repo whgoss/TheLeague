@@ -16,6 +16,7 @@
     self = [super init];
     _facebookId = dict[FACEBOOK_ID];
     _name = dict[NAME];
+    _userId = dict[ID];
     return self;
 }
 

@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Will Goss. All rights reserved.
 //
 
+@class User;
 #import "BaseUIViewController.h"
 
 @interface MainViewController : BaseUIViewController <UITableViewDataSource, UITableViewDelegate>
