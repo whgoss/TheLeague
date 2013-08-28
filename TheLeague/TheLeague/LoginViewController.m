@@ -30,10 +30,6 @@
 {
     [super viewDidLoad];
     
-    // show loading indicator
-    _loadingIndicator.labelText = @"Logging in...";
-    [_loadingIndicator show:TRUE];
-    
 	// update view
     [self updateView];
     
@@ -58,12 +54,6 @@
                                                              NSError *error) {
                 // we recurse here, in order to update buttons and labels
                 [self updateView];
-                
-                // set active session (not sure if this is necessary atm)
-                [FBSession setActiveSession:appDelegate.session];
-                
-                // log user in
-                [appDelegate.userManager logIn];
             }];
         }
     }
@@ -77,10 +67,20 @@
     AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
     if (appDelegate.session.isOpen)
     {
+        // show loading indicator
+        _loadingIndicator.labelText = @"Logging in...";
+        [_loadingIndicator show:TRUE];
+        
+        // set active session (not sure if this is necessary atm)
+        [FBSession setActiveSession:appDelegate.session];
+        
         // valid account UI is shown whenever the session is open
         [self.buttonLoginLogout setTitle:@"Log out" forState:UIControlStateNormal];
-        [self.textNoteOrLink setText:[NSString stringWithFormat:@"https://graph.facebook.com/me/friends?access_token=%@",
-                                      appDelegate.session.accessTokenData.accessToken]];
+//        [self.textNoteOrLink setText:[NSString stringWithFormat:@"https://graph.facebook.com/me/friends?access_token=%@",
+//                                      appDelegate.session.accessTokenData.accessToken]];
+        
+        // log user in
+        [appDelegate.userManager logIn];
         
     } else {
         // login-needed account UI is shown whenever the session is closed
@@ -94,7 +94,7 @@
 - (IBAction)buttonClickHandler:(id)sender
 {
     // get the app delegate so that we can access the session property
-    AppDelegate *appDelegate = [[UIApplication sharedApplication]delegate];
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     
     // this button's job is to flip-flop the session from open to closed
     if (appDelegate.session.isOpen)
@@ -119,8 +119,8 @@
             // and here we make sure to update our UX according to the new session state
             [self updateView];
             
-            // generate c   lient hash
-            [appDelegate.userManager logIn];
+            // log user in
+//            [appDelegate.userManager logIn];
         }];
     }
 }

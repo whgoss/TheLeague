@@ -18,6 +18,11 @@ NSString *const ENDPOINT_STANDINGS = @"/getStandings.php";
 
 NSString *const USER = @"user";
 NSString *const ID = @"id";
+NSString *const MOVE_UP = @"moveUp";
+NSString *const MOVE_DOWN = @"moveDown";
+NSString *const MOVE_NONE = @"moveNone";
+NSString *const MOVEMENT = @"movement";
+NSString *const POSITION = @"position";
 
 // Segue constants
 NSString *const LOGIN_TO_MAIN = @"LoginToMainSegue";

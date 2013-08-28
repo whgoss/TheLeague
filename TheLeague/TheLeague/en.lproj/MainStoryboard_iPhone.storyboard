@@ -61,7 +61,7 @@
                     <navigationItem key="navigationItem" title="Login" id="E1j-CY-dWe"/>
                     <connections>
                         <outlet property="buttonLoginLogout" destination="jyZ-HF-L5x" id="CXA-eO-eJF"/>
-                        <outlet property="textNoteOrLink" destination="jbM-iQ-9EK" id="fDz-jr-xCE"/>
+                        <outlet property="textNoteOrLink" destination="jbM-iQ-9EK" id="7gU-Da-MiO"/>
                         <segue destination="2Pz-WW-xIG" kind="push" identifier="LoginToMainSegue" id="JMm-JX-Kcu"/>
                     </connections>
                 </viewController>
@@ -95,10 +95,10 @@
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wux-9E-HKT">
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="33" id="CkC-Uf-ZQL"/>
-                                                        <constraint firstAttribute="width" constant="222" id="bqG-am-kVi"/>
+                                                        <constraint firstAttribute="width" constant="203" id="2Hm-dd-tJq"/>
+                                                        <constraint firstAttribute="height" constant="33" id="xcL-ck-XBa"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
@@ -111,21 +111,30 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="green_arrow_up.png" translatesAutoresizingMaskIntoConstraints="NO" id="45Q-E4-mvD">
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="7QM-sS-RMF"/>
+                                                        <constraint firstAttribute="width" constant="24" id="Yan-zv-AeT"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="zTD-Xw-rud" firstAttribute="centerY" secondItem="45Q-E4-mvD" secondAttribute="centerY" type="default" id="DRf-yk-mfd"/>
                                             <constraint firstItem="Wux-9E-HKT" firstAttribute="top" secondItem="P2z-5o-N69" secondAttribute="top" constant="20" type="default" id="FHu-uA-zpx"/>
-                                            <constraint firstItem="DZ5-bA-dAA" firstAttribute="centerY" secondItem="P2z-5o-N69" secondAttribute="centerY" type="default" id="M63-Qi-gXF"/>
+                                            <constraint firstItem="45Q-E4-mvD" firstAttribute="leading" secondItem="Wux-9E-HKT" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="HUu-WP-ad3"/>
                                             <constraint firstItem="zTD-Xw-rud" firstAttribute="centerX" secondItem="DZ5-bA-dAA" secondAttribute="centerX" type="default" id="aT1-JS-V3s"/>
                                             <constraint firstItem="zTD-Xw-rud" firstAttribute="centerY" secondItem="DZ5-bA-dAA" secondAttribute="centerY" type="default" id="gpy-DL-GZH"/>
                                             <constraint firstItem="Wux-9E-HKT" firstAttribute="leading" secondItem="DZ5-bA-dAA" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="tf3-QA-8UE"/>
-                                            <constraint firstAttribute="trailing" secondItem="Wux-9E-HKT" secondAttribute="trailing" constant="20" type="default" id="xqK-lu-oTF"/>
+                                            <constraint firstItem="DZ5-bA-dAA" firstAttribute="leading" secondItem="P2z-5o-N69" secondAttribute="leading" constant="6" id="vty-3z-JzD"/>
+                                            <constraint firstItem="zTD-Xw-rud" firstAttribute="centerY" secondItem="P2z-5o-N69" secondAttribute="centerY" type="default" id="xfY-vN-dDo"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="avatarView" destination="DZ5-bA-dAA" id="su7-Om-P5P"/>
                                             <outlet property="nameLabel" destination="Wux-9E-HKT" id="vyM-hD-Q2v"/>
                                             <outlet property="positionLabel" destination="zTD-Xw-rud" id="7rn-jd-MnR"/>
+                                            <outlet property="upDownView" destination="45Q-E4-mvD" id="uLj-n1-aLH"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -173,6 +182,7 @@
     </scenes>
     <resources>
         <image name="default-avatar@2x.png" width="48" height="48"/>
+        <image name="green_arrow_up.png" width="64" height="64"/>
     </resources>
     <classes>
         <class className="BaseUIViewController" superclassName="UIViewController">

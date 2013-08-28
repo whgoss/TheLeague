@@ -19,6 +19,11 @@ NSString extern *const ENDPOINT_STANDINGS;
 // Misc constants
 NSString extern *const USER;
 NSString extern *const ID;
+NSString extern *const MOVE_UP;
+NSString extern *const MOVE_DOWN;
+NSString extern *const MOVE_NONE;
+NSString extern *const MOVEMENT;
+NSString extern *const POSITION;
 
 // Segue constants
 NSString extern *const LOGIN_TO_MAIN;

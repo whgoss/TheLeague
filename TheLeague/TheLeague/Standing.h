@@ -11,6 +11,7 @@
 
 @interface Standing : NSObject
 
+@property (strong, nonatomic) NSString *movement;
 @property (strong, nonatomic) NSString *standingId;
 @property (strong, nonatomic) User *user;
 @property (nonatomic) int position;

@@ -16,8 +16,9 @@
 {
     self = [super init];
     _standingId = dict[ID];
-    NSString *pos = dict[@"position"];
+    NSString *pos = dict[POSITION];
     _position = [pos intValue];
+    _movement = dict[MOVEMENT];
     _user = [[User alloc] initFromDictionary:dict[USER]];
     return self;
 }
