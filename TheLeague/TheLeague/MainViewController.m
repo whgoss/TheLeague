@@ -38,14 +38,13 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
-    return 1;
+    // TO-DO: needs to change
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return _standingsArray.count;
+    return section + 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -54,11 +53,26 @@
     
     if (_standingsArray.count > 0)
     {
-        Standing *standing = [_standingsArray objectAtIndex:indexPath.row];
+        Standing *standing = [_standingsArray objectAtIndex:[self indexPathToArrayIndex:indexPath]];
         [standingCell configureFromStanding:standing];
     }
     
     return standingCell;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return [NSString stringWithFormat:@"Bracket %d", section + 1];
+}
+
+- (int)indexPathToArrayIndex: (NSIndexPath*)indexPath
+{
+    int startingIndex = 0;
+    for (int i = 0; i < [indexPath section] + 1; i++)
+    {
+        startingIndex += i;
+    }
+    return startingIndex + [indexPath row];
 }
 
 #pragma mark - Remote callbacks
