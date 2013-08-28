@@ -8,6 +8,7 @@
 
 #import "AFNetworking.h"
 #import "APIClient.h"
+#import "AppDelegate.h"
 #import "Callback.h"
 #import "Constants.h"
 #import "Standing.h"
@@ -19,6 +20,8 @@
 
 @property (strong, nonatomic) Standing *standing;
 @property (strong, nonatomic) User *user;
+@property (strong, nonatomic) UserStatistics *stats;
+@property (strong, nonatomic) Standing *currentUserStanding;
 
 @end
 
@@ -39,14 +42,16 @@
     NSString *facebookId = _user.facebookId;
     NSString *avatarString = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=normal", facebookId];
     NSURL *avatarURL = [[NSURL alloc] initWithString:avatarString];
-    
     [_avatarView setImageWithURL:avatarURL placeholderImage:[UIImage imageNamed:@"default-avatar.png"]];
     _avatarView.clipsToBounds = YES;
     
+    // hide the challenge button by default for aesthetic purposes
+    [_challengeButton setEnabled:FALSE];
+    
     // get user stats
     NSString *endpoint = [NSString stringWithFormat:@"%@", ENDPOINT_USER_STATS];
-    NSArray *keys = [[NSArray alloc] initWithObjects:USER_ID, nil];
-    NSArray *objects = [[NSArray alloc] initWithObjects:_user.userId, nil];
+    NSArray *keys = [[NSArray alloc] initWithObjects:USER_ID, @"apiKey", nil];
+    NSArray *objects = [[NSArray alloc] initWithObjects:_user.userId, API_KEY, nil];
     NSDictionary *params = [[NSDictionary alloc] initWithObjects:objects forKeys:keys];
     [APIClient get:endpoint withQueryParams:params success:[self userStatsSuccess] failure:[self userStatsFailure]];
 }
@@ -66,12 +71,52 @@
         NSDictionary *statDict = JSON;
         
         // get statistics
-        UserStatistics *stats = [[UserStatistics alloc] initFromDictionary:statDict];
+        _stats = [[UserStatistics alloc] initFromDictionary:statDict];
         
         // set labels
         _rankLabel.text = [NSString stringWithFormat:@"Rank: %d", _standing.position];
-        _recordLabel.text = [NSString stringWithFormat:@"Record: (%d-%d)", stats.wins, stats.losses];
-        _winPercentageLabel.text = [NSString stringWithFormat:@"Win Percent: %d%%", stats.winPercentage];
+        _recordLabel.text = [NSString stringWithFormat:@"Record: (%d-%d)", _stats.wins, _stats.losses];
+        _winPercentageLabel.text = [NSString stringWithFormat:@"Win Percent: %d%%", _stats.winPercentage];
+        
+        // get app delegate
+        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        
+        // get logged in user standing
+        NSString *endpoint = [NSString stringWithFormat:@"%@", ENDPOINT_USER_STANDING];
+        NSArray *keys = [[NSArray alloc] initWithObjects:@"apiKey", USER_ID, nil];
+        NSArray *objects = [[NSArray alloc] initWithObjects:API_KEY, appDelegate.userManager.user.userId, nil];
+        NSDictionary *params = [[NSDictionary alloc] initWithObjects:objects forKeys:keys];
+        [APIClient get:endpoint withQueryParams:params success:[self currentUserStandingSuccess] failure:[self currentUserStandingFailure]];
+    };
+    
+    return block;
+}
+
+- (FailureCallback) userStatsFailure
+{
+    FailureCallback block = ^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
+    {
+        // hide loading indicator
+        [_loadingIndicator hide:TRUE];
+    };
+    
+    return block;
+}
+
+- (SuccessCallback) currentUserStandingSuccess
+{
+    SuccessCallback block = ^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
+    {
+        NSDictionary *result = JSON;
+        _currentUserStanding = [[Standing alloc] initFromDictionary:result];
+        int currentUserBracket = [Standing playerRankToBracketNumber:_currentUserStanding.position];
+        int profileUserBracket = [Standing playerRankToBracketNumber:_standing.position];
+        
+        // if the player's current bracket is not one less the bracket of the player whose profile is currently being viewed, disable the challenge button
+        if (profileUserBracket == (currentUserBracket - 1))
+        {
+            [_challengeButton setEnabled:TRUE];
+        }
         
         // hide loading indicator
         [_loadingIndicator hide:TRUE];
@@ -80,7 +125,7 @@
     return block;
 }
 
-- (FailureCallback) userStatsFailure
+- (FailureCallback) currentUserStandingFailure
 {
     FailureCallback block = ^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
     {

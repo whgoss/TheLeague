@@ -23,4 +23,22 @@
     return self;
 }
 
++ (int)playerRankToBracketNumber: (int)rank
+{
+    int temp = 0;
+    for (int i = 0; i <= rank; i++)
+    {
+        if (temp + i >= rank)
+        {
+            return i;
+        }
+        else
+        {
+            temp += i;
+        }
+    }
+    
+    return temp;
+}
+
 @end

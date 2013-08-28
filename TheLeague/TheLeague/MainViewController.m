@@ -56,7 +56,10 @@
     
     // get standings
     NSString *endpoint = [NSString stringWithFormat:@"%@", ENDPOINT_STANDINGS];
-    [APIClient get:endpoint withQueryParams:nil success:[self standingsSuccess] failure:[self standingsFailure]];
+    NSArray *keys = [[NSArray alloc] initWithObjects:@"apiKey", nil];
+    NSArray *objects = [[NSArray alloc] initWithObjects:API_KEY, nil];
+    NSDictionary *params = [[NSDictionary alloc] initWithObjects:objects forKeys:keys];
+    [APIClient get:endpoint withQueryParams:params success:[self standingsSuccess] failure:[self standingsFailure]];
 }
 
 #pragma mark - Table view data source

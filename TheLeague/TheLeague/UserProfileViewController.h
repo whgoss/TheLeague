@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *lastLoginLabel;
 @property (strong, nonatomic) IBOutlet UITableView *statsView;
 @property (strong, nonatomic) IBOutlet UIImageView *avatarView;
+@property (strong, nonatomic) IBOutlet UIButton *challengeButton;
 
 - (void)setUser: (User*)user withStanding: (Standing*)standing;
 

@@ -13,6 +13,7 @@
 #import "LoginViewController.h"
 #import "UserManager.h"
 #import "NSString+NSString_Extended.h"
+#import "User.h"
 
 @interface LoginViewController ()
 
@@ -170,6 +171,15 @@
 {
     SuccessCallback block = ^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
     {
+        NSDictionary *result = JSON;
+        User *user = [[User alloc] initFromDictionary:result];
+        
+        // get app delegate
+        AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+        
+        // set current user
+        appDelegate.userManager.user = user;
+        
         // hide loading indicator
         [_loadingIndicator hide:TRUE];
         

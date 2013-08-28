@@ -10,6 +10,7 @@
 
 @interface UserStatistics : NSObject
 
+@property (nonatomic) int rank;
 @property (nonatomic) int wins;
 @property (nonatomic) int losses;
 @property (nonatomic) int winPercentage;

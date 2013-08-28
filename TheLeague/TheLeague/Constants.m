@@ -19,6 +19,7 @@ NSString *const NOTIFICATION_USER_LOGGED_IN = @"NOTIFICATION_USER_LOGGED_IN";
 NSString *const ENDPOINT_USER_LOGIN = @"/loginUser.php";
 NSString *const ENDPOINT_STANDINGS = @"/getStandings.php";
 NSString *const ENDPOINT_USER_STATS = @"/getUserStatistics.php";
+NSString *const ENDPOINT_USER_STANDING = @"/getStanding.php";
 
 NSString *const USER = @"user";
 NSString *const USER_ID = @"userId";

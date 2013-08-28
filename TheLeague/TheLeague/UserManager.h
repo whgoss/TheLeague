@@ -7,6 +7,7 @@
 //
 
 @class AppDelegate;
+@class User;
 #import <Foundation/Foundation.h>
 
 @interface UserManager : NSObject
@@ -17,6 +18,7 @@
 @property (strong, nonatomic) NSString *fbUID;
 @property (strong, nonatomic) NSString *userName;
 @property (strong, nonatomic) NSString *displayName;
+@property (strong, nonatomic) User *user;
 
 - (void)logIn;
 - (void)logOut;

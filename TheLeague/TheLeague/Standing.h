@@ -17,5 +17,6 @@
 @property (nonatomic) int position;
 
 - (id)initFromDictionary: (NSDictionary*)dict;
++ (int)playerRankToBracketNumber: (int)rank;
 
 @end

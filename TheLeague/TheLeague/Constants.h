@@ -19,6 +19,7 @@ NSString extern *const NOTIFICATION_USER_LOGGED_IN;
 NSString extern *const ENDPOINT_USER_LOGIN;
 NSString extern *const ENDPOINT_STANDINGS;
 NSString extern *const ENDPOINT_USER_STATS;
+NSString extern *const ENDPOINT_USER_STANDING;
 
 // Misc constants
 NSString extern *const USER;

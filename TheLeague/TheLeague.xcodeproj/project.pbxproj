@@ -25,6 +25,7 @@
 		D651521617CE2EDB00378A25 /* red_arrow_down.png in Resources */ = {isa = PBXBuildFile; fileRef = D651521517CE2EDB00378A25 /* red_arrow_down.png */; };
 		D651521C17CE4E8500378A25 /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D651521B17CE4E8500378A25 /* UserProfileViewController.m */; };
 		D651521F17CE58A700378A25 /* UserStatistics.m in Sources */ = {isa = PBXBuildFile; fileRef = D651521E17CE58A700378A25 /* UserStatistics.m */; };
+		D651522417CE9AD800378A25 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D651522317CE9AD800378A25 /* QuartzCore.framework */; };
 		D6F63A1817CBAA9A0090ECDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F63A1717CBAA9A0090ECDF /* UIKit.framework */; };
 		D6F63A1A17CBAA9A0090ECDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F63A1917CBAA9A0090ECDF /* Foundation.framework */; };
 		D6F63A1C17CBAA9A0090ECDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F63A1B17CBAA9A0090ECDF /* CoreGraphics.framework */; };
@@ -82,6 +83,7 @@
 		D651521B17CE4E8500378A25 /* UserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserProfileViewController.m; sourceTree = "<group>"; };
 		D651521D17CE58A700378A25 /* UserStatistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserStatistics.h; sourceTree = "<group>"; };
 		D651521E17CE58A700378A25 /* UserStatistics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserStatistics.m; sourceTree = "<group>"; };
+		D651522317CE9AD800378A25 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		D6F63A1417CBAA9A0090ECDF /* TheLeague.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheLeague.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F63A1717CBAA9A0090ECDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D6F63A1917CBAA9A0090ECDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -123,6 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D651522417CE9AD800378A25 /* QuartzCore.framework in Frameworks */,
 				D63B910917CBB3D700576B55 /* FacebookSDK.framework in Frameworks */,
 				D6F63A1817CBAA9A0090ECDF /* UIKit.framework in Frameworks */,
 				D6F63A1A17CBAA9A0090ECDF /* Foundation.framework in Frameworks */,
@@ -177,6 +180,7 @@
 		D6F63A0B17CBAA9A0090ECDF = {
 			isa = PBXGroup;
 			children = (
+				D651522317CE9AD800378A25 /* QuartzCore.framework */,
 				D63B910717CBB3B200576B55 /* FacebookSDK */,
 				D6F63A1D17CBAA9A0090ECDF /* TheLeague */,
 				D6F63A1617CBAA9A0090ECDF /* Frameworks */,
