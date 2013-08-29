@@ -184,15 +184,15 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ag-QQ-sf9">
-                                <color key="backgroundColor" red="0.24219182140000001" green="0.76853133740000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ag-QQ-sf9">
+                                <color key="backgroundColor" red="0.094117656350135803" green="0.61176472902297974" blue="0.094117656350135803" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="189" id="2aX-Ii-Ky3"/>
                                     <constraint firstAttribute="height" constant="44" id="i2H-oX-U2V"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="CHALLENGE">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.9960784912109375" green="0.99215692281723022" blue="0.99215692281723022" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -341,7 +341,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UserProfileViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="avatarView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="challengeButton" candidateClass="GradientButton"/>
+                <relationship kind="outlet" name="challengeButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="lastLoginLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="rankLabel" candidateClass="UILabel"/>

@@ -47,6 +47,7 @@
     
     // hide the challenge button by default for aesthetic purposes
     [_challengeButton setEnabled:FALSE];
+    [_challengeButton setAlpha:0.5f];
     
     // get user stats
     NSString *endpoint = [NSString stringWithFormat:@"%@", ENDPOINT_USER_STATS];
@@ -116,6 +117,7 @@
         if (profileUserBracket == (currentUserBracket - 1))
         {
             [_challengeButton setEnabled:TRUE];
+            [_challengeButton setAlpha:1.0f];
         }
         
         // hide loading indicator
