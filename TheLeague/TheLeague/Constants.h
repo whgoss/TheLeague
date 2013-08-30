@@ -32,6 +32,7 @@ NSString extern *const MOVEMENT;
 NSString extern *const POSITION;
 NSString extern *const WINS;
 NSString extern *const LOSSES;
+NSString extern *const ACCESS_TOKEN;
 NSString extern *const WIN_PERCENTAGE;
 
 // Segue constants

@@ -31,6 +31,7 @@ NSString *const MOVEMENT = @"movement";
 NSString *const POSITION = @"position";
 NSString *const WINS = @"wins";
 NSString *const LOSSES = @"losses";
+NSString *const ACCESS_TOKEN = @"accessToken";
 NSString *const WIN_PERCENTAGE = @"winPercentage";
 
 // Segue constants

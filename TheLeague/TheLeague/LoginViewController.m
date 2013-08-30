@@ -133,15 +133,14 @@
     
     // get logged in user info
     NSString *endpoint = [NSString stringWithFormat:@"%@", ENDPOINT_USER_LOGIN];
-    NSArray *keys = [[NSArray alloc] initWithObjects:FACEBOOK_ID, NAME, @"authToken", nil];
-    NSString *hash = [APIClient authHash];
+    NSArray *keys = [[NSArray alloc] initWithObjects:FACEBOOK_ID, NAME, ACCESS_TOKEN, nil];
     NSString *displayName = [appDelegate.userManager.displayName urlencode];
-    NSArray *objects = [[NSArray alloc] initWithObjects:appDelegate.userManager.fbUID, displayName, appDelegate.userManager.fbAccessToken, nil];
+    NSArray *objects = [[NSArray alloc] initWithObjects:appDelegate.userManager.fbUID, displayName, [NSString stringWithFormat:@"%@", appDelegate.userManager.fbAccessToken], nil];
     NSDictionary *params = [[NSDictionary alloc] initWithObjects:objects forKeys:keys];
     [APIClient get:endpoint withQueryParams:params success:[self loginSuccess] failure:[self loginFailure]];
 }
 
-#pragma mark Template generated code
+#pragma mark - Template generated code
 
 - (void)viewDidUnload
 {
@@ -149,20 +148,6 @@
     self.textNoteOrLink = nil;
     
     [super viewDidUnload];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return FALSE;
-    // Return YES for supported orientations
-//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
-//    {
-//        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-//    }
-//    else
-//    {
-//        return FALSE;
-//    }
 }
 
 #pragma mark - Remote callbacks
