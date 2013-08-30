@@ -71,7 +71,7 @@ typedef void(^FBCompletionHandler)(FBRequestConnection *connection, NSDictionary
 
 -(void)retrieveFbUserInfo:(NSDictionary<FBGraphUser> *) user
 {
-    _fbAccessToken = FBSession.activeSession.accessToken;
+    _fbAccessToken = FBSession.activeSession.accessTokenData.accessToken;
     _fbUID = [user objectForKey:@"id"];
     _userName = [user objectForKey:@"username"];
     _displayName = [user objectForKey:@"name"];

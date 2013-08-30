@@ -133,10 +133,10 @@
     
     // get logged in user info
     NSString *endpoint = [NSString stringWithFormat:@"%@", ENDPOINT_USER_LOGIN];
-    NSArray *keys = [[NSArray alloc] initWithObjects:FACEBOOK_ID, NAME, AUTH_HASH, nil];
+    NSArray *keys = [[NSArray alloc] initWithObjects:FACEBOOK_ID, NAME, @"authToken", nil];
     NSString *hash = [APIClient authHash];
     NSString *displayName = [appDelegate.userManager.displayName urlencode];
-    NSArray *objects = [[NSArray alloc] initWithObjects:appDelegate.userManager.fbUID, displayName, hash, nil];
+    NSArray *objects = [[NSArray alloc] initWithObjects:appDelegate.userManager.fbUID, displayName, appDelegate.userManager.fbAccessToken, nil];
     NSDictionary *params = [[NSDictionary alloc] initWithObjects:objects forKeys:keys];
     [APIClient get:endpoint withQueryParams:params success:[self loginSuccess] failure:[self loginFailure]];
 }
