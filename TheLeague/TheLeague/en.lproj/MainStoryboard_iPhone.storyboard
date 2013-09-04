@@ -62,19 +62,34 @@
                     <connections>
                         <outlet property="buttonLoginLogout" destination="jyZ-HF-L5x" id="CXA-eO-eJF"/>
                         <outlet property="textNoteOrLink" destination="jbM-iQ-9EK" id="7gU-Da-MiO"/>
-                        <segue destination="2Pz-WW-xIG" kind="push" identifier="LoginToMainSegue" id="JMm-JX-Kcu"/>
+                        <segue destination="3ZK-Ih-Dgu" kind="push" identifier="LoginToMainSegue" id="lJn-AG-p7u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="821" y="53"/>
         </scene>
+        <!--Challenges View Controller - Challenges-->
+        <scene sceneID="yMq-ri-42P">
+            <objects>
+                <viewController id="bZ2-4l-4AG" customClass="ChallengesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QCY-7q-dXw">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Challenges" image="pingpong-paddle.png" id="Tzg-3E-8jg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tBj-ei-inJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1743" y="-615"/>
+        </scene>
         <!--Main View Controller - Standings-->
         <scene sceneID="hJb-Vj-owM">
             <objects>
                 <viewController id="2Pz-WW-xIG" customClass="MainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AD1-Pv-qgN">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="74" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hEr-lo-vAL">
@@ -146,12 +161,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hEr-lo-vAL" firstAttribute="leading" secondItem="AD1-Pv-qgN" secondAttribute="leading" type="default" id="62C-bB-rzf"/>
-                            <constraint firstItem="hEr-lo-vAL" firstAttribute="bottom" secondItem="AD1-Pv-qgN" secondAttribute="bottom" type="default" id="UdY-FX-0zE"/>
-                            <constraint firstItem="hEr-lo-vAL" firstAttribute="trailing" secondItem="AD1-Pv-qgN" secondAttribute="trailing" type="default" id="WuG-KX-6jP"/>
-                            <constraint firstItem="hEr-lo-vAL" firstAttribute="top" secondItem="AD1-Pv-qgN" secondAttribute="top" type="default" id="fv4-xa-46l"/>
+                            <constraint firstItem="hEr-lo-vAL" firstAttribute="trailing" secondItem="AD1-Pv-qgN" secondAttribute="trailing" type="default" id="LSH-UY-pTg"/>
+                            <constraint firstItem="hEr-lo-vAL" firstAttribute="leading" secondItem="AD1-Pv-qgN" secondAttribute="leading" type="default" id="XH3-OV-Cxr"/>
+                            <constraint firstItem="hEr-lo-vAL" firstAttribute="bottom" secondItem="AD1-Pv-qgN" secondAttribute="bottom" type="default" id="nvt-uX-edh"/>
+                            <constraint firstItem="hEr-lo-vAL" firstAttribute="top" secondItem="AD1-Pv-qgN" secondAttribute="top" type="default" id="vcd-Jw-wCi"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Standings" image="trophy_icon.png" id="Whf-Ly-Tyl"/>
                     <navigationItem key="navigationItem" title="Standings" id="zXH-3c-fIc"/>
                     <connections>
                         <outlet property="tableView" destination="hEr-lo-vAL" id="deS-Mh-NnA"/>
@@ -160,14 +176,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5sC-L1-Tat" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1253" y="53"/>
+            <point key="canvasLocation" x="1743" y="53"/>
+        </scene>
+        <!--Statistics View Controller - Statistics-->
+        <scene sceneID="BVk-Ph-8j2">
+            <objects>
+                <viewController id="54Q-L3-wt2" customClass="StatisticsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OCy-rK-E1R">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Statistics" image="pie_chart.png" id="jcT-fq-c2J"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q6v-8B-kqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1743" y="726"/>
         </scene>
         <!--User Profile View Controller - Player Profile-->
         <scene sceneID="fqI-6K-W1l">
             <objects>
                 <viewController id="M97-nR-16J" customClass="UserProfileViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Caf-Da-tgJ">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ekp-bn-CrB">
@@ -268,7 +299,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JOj-Oq-Voo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1713" y="53"/>
+            <point key="canvasLocation" x="2369" y="53"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="nl7-AU-rdg">
@@ -282,7 +313,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pZZ-Tx-Qwb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2144" y="53"/>
+            <point key="canvasLocation" x="2814" y="53"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Pdg-J0-qng">
@@ -299,17 +330,58 @@
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="miP-m8-lMk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tabBar contentMode="scaleToFill" id="dkY-je-R2x">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <items>
+                        <tabBarItem title="Standings" image="trophy_icon.png" id="mx5-yt-gzr"/>
+                        <tabBarItem title="Challenges" image="pingpong-paddle.png" id="OEd-RW-upv"/>
+                        <tabBarItem title="Statistics" image="pie_chart.png" id="q3z-ZJ-gnS"/>
+                    </items>
+                </tabBar>
             </objects>
             <point key="canvasLocation" x="358" y="53"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Jyy-O8-951">
+            <objects>
+                <tabBarController id="3ZK-Ih-Dgu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="fsB-z1-pKT"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="oMY-QU-wHa">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="2Pz-WW-xIG" kind="relationship" relationship="viewControllers" id="u2o-ce-SLg"/>
+                        <segue destination="bZ2-4l-4AG" kind="relationship" relationship="viewControllers" id="esz-Jo-H0r"/>
+                        <segue destination="54Q-L3-wt2" kind="relationship" relationship="viewControllers" id="4fT-1Y-TqT"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bIr-Gf-q18" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1280" y="53"/>
         </scene>
     </scenes>
     <resources>
         <image name="default-avatar@2x.png" width="48" height="48"/>
         <image name="green_arrow_up.png" width="64" height="64"/>
+        <image name="pie_chart.png" width="32" height="32"/>
+        <image name="pingpong-paddle.png" width="32" height="32"/>
+        <image name="trophy_icon.png" width="32" height="32"/>
     </resources>
     <classes>
         <class className="BaseUIViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseUIViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tabBar" candidateClass="UITabBar"/>
+            </relationships>
+        </class>
+        <class className="ChallengesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChallengesViewController.h"/>
         </class>
         <class className="LoginViewController" superclassName="BaseUIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
@@ -336,6 +408,9 @@
                 <relationship kind="outlet" name="positionLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="upDownView" candidateClass="UIImageView"/>
             </relationships>
+        </class>
+        <class className="StatisticsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StatisticsViewController.h"/>
         </class>
         <class className="UserProfileViewController" superclassName="BaseUIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UserProfileViewController.h"/>

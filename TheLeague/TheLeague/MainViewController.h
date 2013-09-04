@@ -9,7 +9,7 @@
 @class User;
 #import "BaseUIViewController.h"
 
-@interface MainViewController : BaseUIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface MainViewController : BaseUIViewController <UITableViewDataSource, UITableViewDelegate, UITabBarDelegate>
 
 @property (strong, nonatomic) NSMutableArray *standingsArray;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;

@@ -26,9 +26,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // hide the back button
-    self.navigationItem.hidesBackButton = TRUE;
 }
 
 - (void)prepareForSegue: (UIStoryboardSegue*)segue sender: (id)sender
@@ -46,6 +43,10 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
+    // hide the back button
+    self.navigationController.navigationItem.hidesBackButton = TRUE;
+    self.navigationItem.hidesBackButton = TRUE;
     
     // show loading indicator
     _loadingIndicator.labelText = @"Loading...";
@@ -77,15 +78,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    StandingCell *standingCell = [tableView dequeueReusableCellWithIdentifier:@"StandingCell"];
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
     
     if (_standingsArray.count > 0)
     {
-        Standing *standing = [_standingsArray objectAtIndex:[self indexPathToArrayIndex:indexPath]];
-        [standingCell configureFromStanding:standing];
+        int index = [self indexPathToArrayIndex:indexPath];
+        if (index < [_standingsArray count])
+        {
+            StandingCell *standingCell = [tableView dequeueReusableCellWithIdentifier:@"StandingCell"];
+            Standing *standing = [_standingsArray objectAtIndex:index];
+            [standingCell configureFromStanding:standing];
+            cell = standingCell;
+        }
     }
-    
-    return standingCell;
+
+    return cell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section

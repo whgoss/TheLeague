@@ -38,6 +38,8 @@ NSString extern *const WIN_PERCENTAGE;
 // Segue constants
 NSString extern *const LOGIN_TO_MAIN;
 NSString extern *const MAIN_TO_PROFILE;
+NSString extern *const MAIN_TO_CHALLENGES;
+NSString extern *const MAIN_TO_STATISTICS;
 
 // GET paramter constants
 NSString extern *const NAME;

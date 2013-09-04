@@ -37,6 +37,8 @@ NSString *const WIN_PERCENTAGE = @"winPercentage";
 // Segue constants
 NSString *const LOGIN_TO_MAIN = @"LoginToMainSegue";
 NSString *const MAIN_TO_PROFILE = @"MainToProfileSegue";
+NSString *const MAIN_TO_CHALLENGES = @"MainToChallengesSegue";
+NSString *const MAIN_TO_STATISTICS = @"MainToStatisticsSegue";
 
 // GET parameter constants
 NSString *const NAME = @"name";
