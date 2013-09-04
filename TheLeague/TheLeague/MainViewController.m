@@ -44,9 +44,9 @@
 {
     [super viewWillAppear:animated];
     
-    // hide the back button
-    self.navigationController.navigationItem.hidesBackButton = TRUE;
-    self.navigationItem.hidesBackButton = TRUE;
+    // hide the back button and persist title
+    self.parentViewController.navigationItem.hidesBackButton = TRUE;
+    self.parentViewController.navigationItem.title = self.navigationItem.title;
     
     // show loading indicator
     _loadingIndicator.labelText = @"Loading...";

@@ -223,8 +223,6 @@
 		D6F63A0B17CBAA9A0090ECDF = {
 			isa = PBXGroup;
 			children = (
-				D651522317CE9AD800378A25 /* QuartzCore.framework */,
-				D63B910717CBB3B200576B55 /* FacebookSDK */,
 				D6F63A1D17CBAA9A0090ECDF /* TheLeague */,
 				D6F63A1617CBAA9A0090ECDF /* Frameworks */,
 				D6F63A1517CBAA9A0090ECDF /* Products */,
@@ -242,6 +240,8 @@
 		D6F63A1617CBAA9A0090ECDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D63B910717CBB3B200576B55 /* FacebookSDK */,
+				D651522317CE9AD800378A25 /* QuartzCore.framework */,
 				D602C19F17CBB20100FAEE9B /* FacebookSDK.framework */,
 				D6F63A1717CBAA9A0090ECDF /* UIKit.framework */,
 				D6F63A1917CBAA9A0090ECDF /* Foundation.framework */,

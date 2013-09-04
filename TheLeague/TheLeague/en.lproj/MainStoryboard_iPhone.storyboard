@@ -79,6 +79,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Challenges" image="pingpong-paddle.png" id="Tzg-3E-8jg"/>
+                    <navigationItem key="navigationItem" title="Challenges" id="Woh-pP-VEW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tBj-ei-inJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -188,6 +189,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Statistics" image="pie_chart.png" id="jcT-fq-c2J"/>
+                    <navigationItem key="navigationItem" title="Statistics" id="D9m-Vr-kkN"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q6v-8B-kqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -320,7 +322,8 @@
             <objects>
                 <navigationController id="8Vz-hZ-pFG" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AXt-Bb-oIy">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="blackOpaque" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackOpaque" id="AXt-Bb-oIy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -376,9 +379,6 @@
     <classes>
         <class className="BaseUIViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseUIViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="tabBar" candidateClass="UITabBar"/>
-            </relationships>
         </class>
         <class className="ChallengesViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ChallengesViewController.h"/>
