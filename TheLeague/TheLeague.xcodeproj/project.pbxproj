@@ -13,7 +13,6 @@
 		D63B911217CBDA3700576B55 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = D63B911117CBDA3700576B55 /* MBProgressHUD.m */; };
 		D63B911517CBED8A00576B55 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D63B911417CBED8A00576B55 /* UserManager.m */; };
 		D643625717D7A55500085701 /* ChallengesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D643625617D7A55500085701 /* ChallengesViewController.m */; };
-		D643625B17D7A64F00085701 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D643625A17D7A64F00085701 /* StatisticsViewController.m */; };
 		D643627817D7ABBF00085701 /* pingpong-paddle.png in Resources */ = {isa = PBXBuildFile; fileRef = D643627617D7ABBF00085701 /* pingpong-paddle.png */; };
 		D643627917D7ABBF00085701 /* pingpong-paddle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D643627717D7ABBF00085701 /* pingpong-paddle@2x.png */; };
 		D643628017D7AD2B00085701 /* trophy_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D643627E17D7AD2B00085701 /* trophy_icon.png */; };
@@ -69,8 +68,6 @@
 		D63B911417CBED8A00576B55 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		D643625517D7A55500085701 /* ChallengesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengesViewController.h; sourceTree = "<group>"; };
 		D643625617D7A55500085701 /* ChallengesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengesViewController.m; sourceTree = "<group>"; };
-		D643625917D7A64F00085701 /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
-		D643625A17D7A64F00085701 /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
 		D643627617D7ABBF00085701 /* pingpong-paddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pingpong-paddle.png"; sourceTree = "<group>"; };
 		D643627717D7ABBF00085701 /* pingpong-paddle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pingpong-paddle@2x.png"; sourceTree = "<group>"; };
 		D643627E17D7AD2B00085701 /* trophy_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy_icon.png; sourceTree = "<group>"; };
@@ -165,8 +162,6 @@
 				D63B910B17CBB3F600576B55 /* LoginViewController.m */,
 				D65151F617CD043F00378A25 /* MainViewController.h */,
 				D65151F717CD043F00378A25 /* MainViewController.m */,
-				D643625917D7A64F00085701 /* StatisticsViewController.h */,
-				D643625A17D7A64F00085701 /* StatisticsViewController.m */,
 				D651521A17CE4E8500378A25 /* UserProfileViewController.h */,
 				D651521B17CE4E8500378A25 /* UserProfileViewController.m */,
 			);
@@ -422,7 +417,6 @@
 				D651521C17CE4E8500378A25 /* UserProfileViewController.m in Sources */,
 				D651521F17CE58A700378A25 /* UserStatistics.m in Sources */,
 				D643625717D7A55500085701 /* ChallengesViewController.m in Sources */,
-				D643625B17D7A64F00085701 /* StatisticsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

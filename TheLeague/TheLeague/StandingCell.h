@@ -12,12 +12,6 @@
 
 @interface StandingCell : UITableViewCell
 
-@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
-@property (strong, nonatomic) IBOutlet UILabel *positionLabel;
-@property (strong, nonatomic) IBOutlet UIImageView *avatarView;
-@property (strong, nonatomic) IBOutlet UIImageView *upDownView;
-@property (strong, nonatomic) Standing *standing;
-
 - (void)configureFromStanding: (Standing*)standing;
 
 @end

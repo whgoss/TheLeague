@@ -68,7 +68,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // TO-DO: needs to change
-    return 3;
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -78,21 +78,24 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    StandingCell *standingCell = [tableView dequeueReusableCellWithIdentifier:@"StandingCell"];
     
     if (_standingsArray.count > 0)
     {
         int index = [self indexPathToArrayIndex:indexPath];
         if (index < [_standingsArray count])
         {
-            StandingCell *standingCell = [tableView dequeueReusableCellWithIdentifier:@"StandingCell"];
+            
             Standing *standing = [_standingsArray objectAtIndex:index];
             [standingCell configureFromStanding:standing];
-            cell = standingCell;
+        }
+        else
+        {
+            [standingCell configureFromStanding:nil];
         }
     }
 
-    return cell;
+    return standingCell;
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -106,11 +109,14 @@
 {
     // get corresponding user
     int index = [self indexPathToArrayIndex:indexPath];
-    _selectedStanding = [_standingsArray objectAtIndex:index];
-    _selectedUser = _selectedStanding.user;
-    
-    // initiate segue
-    [self performSegueWithIdentifier:MAIN_TO_PROFILE sender:self];
+    if (index < [_standingsArray count])
+    {
+        _selectedStanding = [_standingsArray objectAtIndex:index];
+        _selectedUser = _selectedStanding.user;
+        
+        // initiate segue
+        [self performSegueWithIdentifier:MAIN_TO_PROFILE sender:self];
+    }
 }
 
 #pragma mark - Convenience methods
