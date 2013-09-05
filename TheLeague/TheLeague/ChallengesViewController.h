@@ -6,8 +6,9 @@
 //  Copyright (c) 2013 Will Goss. All rights reserved.
 //
 
+#import "BaseUIViewController.h"
 #import <UIKit/UIKit.h>
 
-@interface ChallengesViewController : UIViewController
+@interface ChallengesViewController : BaseUIViewController
 
 @end

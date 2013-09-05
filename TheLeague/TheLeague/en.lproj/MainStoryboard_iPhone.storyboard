@@ -225,7 +225,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Rank:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pct-dX-5lx">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Bracket:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pct-dX-5lx">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="gMO-yE-hHQ"/>
                                 </constraints>
@@ -276,9 +276,9 @@
                     <navigationItem key="navigationItem" title="Player Profile" id="vE0-6x-d0y"/>
                     <connections>
                         <outlet property="avatarView" destination="ekp-bn-CrB" id="Knd-ZV-xEd"/>
+                        <outlet property="bracketLabel" destination="Pct-dX-5lx" id="ZSf-nl-Jsw"/>
                         <outlet property="challengeButton" destination="1ag-QQ-sf9" id="aCb-8R-MqI"/>
                         <outlet property="nameLabel" destination="U62-bX-kyk" id="04m-vi-E6l"/>
-                        <outlet property="rankLabel" destination="Pct-dX-5lx" id="Xug-vI-ZWX"/>
                         <outlet property="recordLabel" destination="gkl-x5-exI" id="4gY-iZ-unO"/>
                         <outlet property="winPercentageLabel" destination="rs4-OO-3PI" id="lrt-C1-P5a"/>
                         <segue destination="C9w-nV-aRx" kind="modal" identifier="ProfileToChallengeSegue" id="Cms-mU-pS9"/>
@@ -397,10 +397,10 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UserProfileViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="avatarView" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="bracketLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="challengeButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="lastLoginLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="rankLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="recordLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="statsView" candidateClass="UITableView"/>
                 <relationship kind="outlet" name="winPercentageLabel" candidateClass="UILabel"/>

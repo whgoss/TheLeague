@@ -20,6 +20,7 @@ NSString extern *const ENDPOINT_USER_LOGIN;
 NSString extern *const ENDPOINT_STANDINGS;
 NSString extern *const ENDPOINT_USER_STATS;
 NSString extern *const ENDPOINT_USER_STANDING;
+NSString extern *const ENDPOINT_USER_CHALLENGES;
 
 // Misc constants
 NSString extern *const USER;

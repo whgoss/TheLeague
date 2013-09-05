@@ -75,7 +75,7 @@
         _stats = [[UserStatistics alloc] initFromDictionary:statDict];
         
         // set labels
-        _rankLabel.text = [NSString stringWithFormat:@"Rank: %d", _standing.position];
+        _bracketLabel.text = [NSString stringWithFormat:@"Bracket: %d", [Standing playerRankToBracketNumber:_standing.position]];
         _recordLabel.text = [NSString stringWithFormat:@"Record: (%d-%d)", _stats.wins, _stats.losses];
         _winPercentageLabel.text = [NSString stringWithFormat:@"Win Percent: %d%%", _stats.winPercentage];
         

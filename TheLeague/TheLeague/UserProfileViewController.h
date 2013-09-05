@@ -13,7 +13,7 @@
 @interface UserProfileViewController : BaseUIViewController
 
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
-@property (strong, nonatomic) IBOutlet UILabel *rankLabel;
+@property (strong, nonatomic) IBOutlet UILabel *bracketLabel;
 @property (strong, nonatomic) IBOutlet UILabel *recordLabel;
 @property (strong, nonatomic) IBOutlet UILabel *winPercentageLabel;
 @property (strong, nonatomic) IBOutlet UILabel *lastLoginLabel;
