@@ -13,6 +13,7 @@
 #import "Constants.h"
 #import "Standing.h"
 #import "User.h"
+#import "UserManager.h"
 #import "UserProfileViewController.h"
 #import "UserStatistics.h"
 
@@ -61,6 +62,24 @@
 {
     _user = user;
     _standing = standing;
+}
+
+#pragma mark - Send challenge 
+
+- (IBAction)challengeButtonClicked:(id)sender
+{
+    // get app delegate
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
+    
+    // hide loading indicator
+    [_loadingIndicator show:TRUE];
+    
+    // prepare send challenge request
+    NSString *endpoint = [NSString stringWithFormat:@"%@", ENDPOINT_USER_SEND_CHALLENGE];
+    NSArray *keys = [[NSArray alloc] initWithObjects:ACCESS_TOKEN, USER_ID, nil];
+    NSArray *objects = [[NSArray alloc] initWithObjects:appDelegate.userManager.fbAccessToken, _user.userId, nil];
+    NSDictionary *params = [[NSDictionary alloc] initWithObjects:objects forKeys:keys];
+    [APIClient get:endpoint withQueryParams:params success:[self challengeSuccess] failure:[self challengeFailure]];
 }
 
 #pragma mark - Remote callbacks
@@ -133,6 +152,36 @@
     {
         // hide loading indicator
         [_loadingIndicator hide:TRUE];
+    };
+    
+    return block;
+}
+
+- (SuccessCallback) challengeSuccess
+{
+    SuccessCallback block = ^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
+    {
+        // hide loading indicator
+        [_loadingIndicator hide:TRUE];
+    };
+    
+    return block;
+}
+
+- (FailureCallback) challengeFailure
+{
+    FailureCallback block = ^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
+    {
+        // hide loading indicator
+        [_loadingIndicator hide:TRUE];
+        
+        // show error
+        NSDictionary *errorDict = JSON;
+        NSString *errorText = errorDict[API_ERROR];
+        
+        //show alert
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:errorText delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     };
     
     return block;

@@ -21,6 +21,7 @@ NSString extern *const ENDPOINT_STANDINGS;
 NSString extern *const ENDPOINT_USER_STATS;
 NSString extern *const ENDPOINT_USER_STANDING;
 NSString extern *const ENDPOINT_USER_CHALLENGES;
+NSString extern *const ENDPOINT_USER_SEND_CHALLENGE;
 
 // Misc constants
 NSString extern *const USER;
@@ -35,6 +36,9 @@ NSString extern *const WINS;
 NSString extern *const LOSSES;
 NSString extern *const ACCESS_TOKEN;
 NSString extern *const WIN_PERCENTAGE;
+NSString extern *const RECIPIENT_ID;
+NSString extern *const SENDER_ID;
+NSString extern *const API_ERROR;
 
 // Segue constants
 NSString extern *const LOGIN_TO_MAIN;

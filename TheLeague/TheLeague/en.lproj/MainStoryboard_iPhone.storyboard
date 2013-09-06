@@ -215,6 +215,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="challengeButtonClicked:" destination="M97-nR-16J" eventType="touchUpInside" id="Jkd-bI-Z03"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Some stats or whatever." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HBt-OJ-t60">
                                 <constraints>
@@ -364,7 +367,7 @@
         <class className="BaseUIViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseUIViewController.h"/>
         </class>
-        <class className="ChallengesViewController" superclassName="UIViewController">
+        <class className="ChallengesViewController" superclassName="BaseUIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ChallengesViewController.h"/>
         </class>
         <class className="LoginViewController" superclassName="BaseUIViewController">
@@ -396,6 +399,7 @@
         <class className="UserProfileViewController" superclassName="BaseUIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UserProfileViewController.h"/>
             <relationships>
+                <relationship kind="action" name="challengeButtonClicked:"/>
                 <relationship kind="outlet" name="avatarView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="bracketLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="challengeButton" candidateClass="UIButton"/>

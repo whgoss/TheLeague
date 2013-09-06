@@ -21,6 +21,7 @@ NSString *const ENDPOINT_STANDINGS = @"/getStandings.php";
 NSString *const ENDPOINT_USER_STATS = @"/getUserStatistics.php";
 NSString *const ENDPOINT_USER_STANDING = @"/getStanding.php";
 NSString *const ENDPOINT_USER_CHALLENGES = @"/getChallenges.php";
+NSString *const ENDPOINT_USER_SEND_CHALLENGE = @"/sendChallenge.php";
 
 #pragma mark - General constants
 
@@ -36,6 +37,9 @@ NSString *const WINS = @"wins";
 NSString *const LOSSES = @"losses";
 NSString *const ACCESS_TOKEN = @"accessToken";
 NSString *const WIN_PERCENTAGE = @"winPercentage";
+NSString *const RECIPIENT_ID = @"recipientId";
+NSString *const SENDER_ID = @"senderId";
+NSString *const API_ERROR = @"apiError";
 
 // Segue constants
 NSString *const LOGIN_TO_MAIN = @"LoginToMainSegue";
