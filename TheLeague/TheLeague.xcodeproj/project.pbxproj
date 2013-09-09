@@ -33,6 +33,9 @@
 		D651521C17CE4E8500378A25 /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D651521B17CE4E8500378A25 /* UserProfileViewController.m */; };
 		D651521F17CE58A700378A25 /* UserStatistics.m in Sources */ = {isa = PBXBuildFile; fileRef = D651521E17CE58A700378A25 /* UserStatistics.m */; };
 		D651522417CE9AD800378A25 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D651522317CE9AD800378A25 /* QuartzCore.framework */; };
+		D6633FE517DA1C93007B33AF /* ChallengeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6633FE417DA1C93007B33AF /* ChallengeCell.m */; };
+		D6633FE817DA1CCF007B33AF /* Challenge.m in Sources */ = {isa = PBXBuildFile; fileRef = D6633FE717DA1CCF007B33AF /* Challenge.m */; };
+		D6633FEF17DA1D32007B33AF /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D6633FEE17DA1D32007B33AF /* BaseModel.m */; };
 		D6F63A1817CBAA9A0090ECDF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F63A1717CBAA9A0090ECDF /* UIKit.framework */; };
 		D6F63A1A17CBAA9A0090ECDF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F63A1917CBAA9A0090ECDF /* Foundation.framework */; };
 		D6F63A1C17CBAA9A0090ECDF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6F63A1B17CBAA9A0090ECDF /* CoreGraphics.framework */; };
@@ -99,6 +102,12 @@
 		D651521D17CE58A700378A25 /* UserStatistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserStatistics.h; sourceTree = "<group>"; };
 		D651521E17CE58A700378A25 /* UserStatistics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserStatistics.m; sourceTree = "<group>"; };
 		D651522317CE9AD800378A25 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D6633FE317DA1C93007B33AF /* ChallengeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChallengeCell.h; sourceTree = "<group>"; };
+		D6633FE417DA1C93007B33AF /* ChallengeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChallengeCell.m; sourceTree = "<group>"; };
+		D6633FE617DA1CCF007B33AF /* Challenge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Challenge.h; sourceTree = "<group>"; };
+		D6633FE717DA1CCF007B33AF /* Challenge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Challenge.m; sourceTree = "<group>"; };
+		D6633FED17DA1D32007B33AF /* BaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		D6633FEE17DA1D32007B33AF /* BaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
 		D6F63A1417CBAA9A0090ECDF /* TheLeague.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheLeague.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6F63A1717CBAA9A0090ECDF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D6F63A1917CBAA9A0090ECDF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -198,6 +207,8 @@
 			children = (
 				D651520817CD3F0A00378A25 /* StandingCell.h */,
 				D651520917CD3F0A00378A25 /* StandingCell.m */,
+				D6633FE317DA1C93007B33AF /* ChallengeCell.h */,
+				D6633FE417DA1C93007B33AF /* ChallengeCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -211,6 +222,10 @@
 				D651520617CD3E5D00378A25 /* Standing.m */,
 				D651521D17CE58A700378A25 /* UserStatistics.h */,
 				D651521E17CE58A700378A25 /* UserStatistics.m */,
+				D6633FE617DA1CCF007B33AF /* Challenge.h */,
+				D6633FE717DA1CCF007B33AF /* Challenge.m */,
+				D6633FED17DA1D32007B33AF /* BaseModel.h */,
+				D6633FEE17DA1D32007B33AF /* BaseModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -417,6 +432,9 @@
 				D651521C17CE4E8500378A25 /* UserProfileViewController.m in Sources */,
 				D651521F17CE58A700378A25 /* UserStatistics.m in Sources */,
 				D643625717D7A55500085701 /* ChallengesViewController.m in Sources */,
+				D6633FE517DA1C93007B33AF /* ChallengeCell.m in Sources */,
+				D6633FE817DA1CCF007B33AF /* Challenge.m in Sources */,
+				D6633FEF17DA1D32007B33AF /* BaseModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

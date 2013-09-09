@@ -9,12 +9,17 @@
 #import "APIClient.h"
 #import "AppDelegate.h"
 #import "Callback.h"
+#import "Challenge.h"
+#import "ChallengeCell.h"
 #import "ChallengesViewController.h"
 #import "Constants.h"
 #import "User.h"
 #import "UserManager.h"
 
 @interface ChallengesViewController ()
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *challengeArray;
 
 @end
 
@@ -53,14 +58,57 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [_challengeArray count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    ChallengeCell *challengeCell = [_tableView dequeueReusableCellWithIdentifier:@"ChallengeCell"];
+    
+    Challenge *challenge = [_challengeArray objectAtIndex:[indexPath row]];
+    [challengeCell configureFromChallenge:challenge];
+    
+    return challengeCell;
+}
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // do something
+}
+
 #pragma mark - Remote callbacks
 
 - (SuccessCallback) challengesSuccess
 {
     SuccessCallback block = ^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
     {
+        // empty data set
+        _challengeArray = [[NSMutableArray alloc] init];
+        
+        // create challenge objects from results
+        NSDictionary *results = JSON;
+        for (NSDictionary * c in results)
+        {
+            Challenge *challenge = [[Challenge alloc] initFromDictionary:c];
+            [_challengeArray addObject:challenge];
+        }
+        
         // hide loading indicator
         [_loadingIndicator hide:TRUE];
+        
+        // reload the table
+        [_tableView reloadData];
     };
     
     return block;

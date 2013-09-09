@@ -7,16 +7,16 @@
 //
 
 @class User;
+#import "BaseModel.h"
 #import <Foundation/Foundation.h>
 
-@interface Standing : NSObject
+@interface Standing : BaseModel
 
 @property (strong, nonatomic) NSString *movement;
 @property (strong, nonatomic) NSString *standingId;
 @property (strong, nonatomic) User *user;
 @property (nonatomic) int position;
 
-- (id)initFromDictionary: (NSDictionary*)dict;
 + (int)playerRankToBracketNumber: (int)rank;
 
 @end

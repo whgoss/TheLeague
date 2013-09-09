@@ -6,16 +6,15 @@
 //  Copyright (c) 2013 Will Goss. All rights reserved.
 //
 
+#import "BaseModel.h"
 #import <Foundation/Foundation.h>
 
-@interface UserStatistics : NSObject
+@interface UserStatistics : BaseModel
 
 @property (nonatomic) int rank;
 @property (nonatomic) int wins;
 @property (nonatomic) int losses;
 @property (nonatomic) int winPercentage;
 @property (strong, nonatomic) NSString *userId;
-
-- (id)initFromDictionary: (NSDictionary*)dict;
 
 @end

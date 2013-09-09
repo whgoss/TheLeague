@@ -38,6 +38,11 @@ NSString extern *const ACCESS_TOKEN;
 NSString extern *const WIN_PERCENTAGE;
 NSString extern *const RECIPIENT_ID;
 NSString extern *const SENDER_ID;
+NSString extern *const MATCH_ID;
+NSString extern *const ACCEPTED;
+NSString extern *const DATE;
+NSString extern *const RECIPIENT;
+NSString extern *const SENDER;
 NSString extern *const API_ERROR;
 
 // Segue constants

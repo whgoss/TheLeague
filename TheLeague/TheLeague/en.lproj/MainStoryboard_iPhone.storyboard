@@ -76,10 +76,61 @@
                     <view key="view" contentMode="scaleToFill" id="QCY-7q-dXw">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="53" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ke8-qD-gcP">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="ChallengeCell" rowHeight="53" id="Sy5-DL-rnC" customClass="ChallengeCell">
+                                        <rect key="frame" x="0.0" y="22" width="320" height="53"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="52"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUL-2q-Iha">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Py0-RI-5QK">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Py0-RI-5QK" secondAttribute="trailing" constant="5" id="GS6-6g-WMA"/>
+                                            <constraint firstItem="KUL-2q-Iha" firstAttribute="leading" secondItem="Sy5-DL-rnC" secondAttribute="leading" constant="20" type="default" id="U4z-WW-eWr"/>
+                                            <constraint firstItem="KUL-2q-Iha" firstAttribute="top" secondItem="Sy5-DL-rnC" secondAttribute="top" constant="15" id="cAe-Y2-4jw"/>
+                                            <constraint firstItem="Py0-RI-5QK" firstAttribute="baseline" secondItem="KUL-2q-Iha" secondAttribute="baseline" type="default" id="wU2-mD-sG0"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="challengeLabel" destination="KUL-2q-Iha" id="1wd-AZ-G59"/>
+                                            <outlet property="winLossLabel" destination="Py0-RI-5QK" id="mnr-1b-EvX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bZ2-4l-4AG" id="tGs-4N-3pO"/>
+                                    <outlet property="delegate" destination="bZ2-4l-4AG" id="CLA-On-p9x"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ke8-qD-gcP" firstAttribute="top" secondItem="QCY-7q-dXw" secondAttribute="top" type="default" id="Oid-FI-Cyz"/>
+                            <constraint firstItem="Ke8-qD-gcP" firstAttribute="bottom" secondItem="QCY-7q-dXw" secondAttribute="bottom" type="default" id="Uxz-eD-WOX"/>
+                            <constraint firstItem="Ke8-qD-gcP" firstAttribute="trailing" secondItem="QCY-7q-dXw" secondAttribute="trailing" type="default" id="huJ-cb-0gD"/>
+                            <constraint firstItem="Ke8-qD-gcP" firstAttribute="leading" secondItem="QCY-7q-dXw" secondAttribute="leading" type="default" id="lQ3-IR-6Gc"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Challenges" image="pingpong-paddle.png" id="Tzg-3E-8jg"/>
                     <navigationItem key="navigationItem" title="Challenges" id="Woh-pP-VEW"/>
+                    <connections>
+                        <outlet property="tableView" destination="Ke8-qD-gcP" id="32L-8J-jcf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tBj-ei-inJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -367,8 +418,18 @@
         <class className="BaseUIViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseUIViewController.h"/>
         </class>
+        <class className="ChallengeCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChallengeCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="challengeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="winLossLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="ChallengesViewController" superclassName="BaseUIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ChallengesViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
         </class>
         <class className="LoginViewController" superclassName="BaseUIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>

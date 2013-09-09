@@ -39,6 +39,11 @@ NSString *const ACCESS_TOKEN = @"accessToken";
 NSString *const WIN_PERCENTAGE = @"winPercentage";
 NSString *const RECIPIENT_ID = @"recipientId";
 NSString *const SENDER_ID = @"senderId";
+NSString *const MATCH_ID = @"matchId";
+NSString *const ACCEPTED = @"accepted";
+NSString *const DATE = @"date";
+NSString *const RECIPIENT = @"recipient";
+NSString *const SENDER = @"sender";
 NSString *const API_ERROR = @"apiError";
 
 // Segue constants

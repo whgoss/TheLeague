@@ -9,6 +9,6 @@
 #import "BaseUIViewController.h"
 #import <UIKit/UIKit.h>
 
-@interface ChallengesViewController : BaseUIViewController
+@interface ChallengesViewController : BaseUIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end
